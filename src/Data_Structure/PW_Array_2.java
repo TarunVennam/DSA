@@ -4,6 +4,28 @@ import java.util.Arrays;
 import java.util.Scanner;
 public class PW_Array_2 {
 
+     // last Occurences of element in Array
+    static void lastOccurences(int arr[],int x){
+        int lastindex = -1;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i]==x){
+                lastindex = i;
+            }
+        }
+        System.out.println(lastindex);
+    }
+
+    // no of Occurences of element in Array
+    static  void CountOccurences(int arr [], int x){
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i]==x){
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+
     static void PrintArray(int []arr){
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] +" ");
@@ -45,6 +67,13 @@ public class PW_Array_2 {
         //CopyOfRange
         int []arr_5 = Arrays.copyOfRange(arr,0,4);
         PrintArray(arr_5);
+
+        int Arr[] = {1, 20 , 56 , 56, 30 ,26};
+        CountOccurences(Arr,30);
+
+        System.out.println(" last Occurences of element in Array");
+        lastOccurences(Arr,56);
+
     }
 
 }
