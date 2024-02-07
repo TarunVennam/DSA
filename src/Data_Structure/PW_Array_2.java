@@ -2,7 +2,39 @@ package Data_Structure;
 
 import java.util.Arrays;
 import java.util.Scanner;
+
+
 public class PW_Array_2 {
+
+      static int[] ArrayLastandFirst(int[] arr){
+          Arrays.sort(arr);
+          int [] ans = {arr[0],arr[arr.length-1]};
+          return ans;
+      }
+
+      // Count no of Element Strictly greater than value of x
+      static void GreaterThanX(int arr[],int x){
+          int count = 0;
+          for (int i = 0; i < arr.length; i++) {
+              if (arr[i]>x){
+                  count ++;
+              }
+          }
+          System.out.println(count);
+      }
+
+      // Array is Sorted or not
+
+    static boolean SortedorNot(int arr[]){
+         boolean check = true;
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i]<arr[i-1]){
+                check = false;
+                break;
+            }
+        }
+       return check;
+    }
 
      // last Occurences of element in Array
     static void lastOccurences(int arr[],int x){
@@ -73,6 +105,14 @@ public class PW_Array_2 {
 
         System.out.println(" last Occurences of element in Array");
         lastOccurences(Arr,56);
+
+        System.out.println("Count no of Element Strictly greater than value of x");
+        GreaterThanX(Arr,56);
+
+        System.out.println(" Count no of Element Strictly greater than value of x "+SortedorNot(Arr));
+        int [] ans = ArrayLastandFirst(Arr);
+        System.out.println("Smallest "+ans[0]);
+        System.out.println("Largest"+ans[1]);
 
     }
 
