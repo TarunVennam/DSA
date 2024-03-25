@@ -16,6 +16,22 @@ public class PW_21_Array {
          }
          return ans;
      }
+
+     static int [] RotateInPlace(int [] arr,int k){
+           int n = arr.length;
+           k = k % n;
+           ReverseForRatate(arr,0,n-k-1);
+           ReverseForRatate(arr,n-k,n-1);
+           ReverseForRatate(arr,0,n-1);
+           return arr;
+     }
+     static void ReverseForRatate(int [] arr, int i, int j){
+         while (i<j) {
+             SwapInArray(arr, i, j);
+             i++;
+             j--;
+         }
+     }
     static int [] ReverseArray(int [] arr){
         int ans[] = new int[arr.length];
         int j = 0;
@@ -80,5 +96,7 @@ public class PW_21_Array {
         System.out.println("Rotating Array");
        int [] Rotate = Rotate(arr,2);
        PrintArray(Rotate);
+       int [] RotateInPlace=  RotateInPlace(arr,10);
+        PrintArray(RotateInPlace);
     }
 }
