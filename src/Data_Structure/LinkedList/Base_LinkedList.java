@@ -16,7 +16,7 @@ public class Base_LinkedList {
     }
     public static void DisplayRecursiveReverse(Node head){// printing data using Recursive method
         if (head==null) return;
-            DisplayRecursiveReverse(head.next);  //   Use For Reverse LinkedList
+            DisplayRecursiveReverse(head.next);    //   Use For Reverse LinkedList
             System.out.print(head.data + " ");
     }
 
