@@ -50,8 +50,8 @@ public class PW_Array_2 {
     // no of Occurences of element in Array
     static  void CountOccurences(int arr [], int x){
         int count = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i]==x){
+        for (int j : arr) {
+            if (j == x) {
                 count++;
             }
         }
